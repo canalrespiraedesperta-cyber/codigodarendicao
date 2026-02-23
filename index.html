@@ -1017,7 +1017,7 @@
   </p>
 
   <div class="hero-cta">
-    <a href="https://pay.hotmart.com/K104500788X" class="btn-primary"><span>Quero o E-book Agora</span></a>
+    <a href="https://pay.hotmart.com/K104500788X" class="btn-primary" target="_blank" rel="noopener"><span>Quero o E-book Agora</span></a>
     <p class="hero-price-hint">Acesso imediato · Somente R$&nbsp;27</p>
   </div>
 
@@ -1280,7 +1280,7 @@
     <div class="pricing-value"><sup>R$</sup>27</div>
     <div class="pricing-installment">Pagamento único · Acesso imediato</div>
 
-    <a href="https://pay.hotmart.com/K104500788X" class="btn-primary" style="width:100%;text-align:center;display:block;">
+    <a href="https://pay.hotmart.com/K104500788X" class="btn-primary" style="width:100%;text-align:center;display:block;" target="_blank" rel="noopener">
       <span>✦ &nbsp;Quero Começar Minha Transformação</span>
     </a>
 
@@ -1365,75 +1365,37 @@
     A vida não está esperando você se tornar uma versão melhor de si mesmo para te dar o que você deseja. Ela está esperando você acreditar que já merece — agora.
   </p>
   <div class="reveal">
-    <a href="https://pay.hotmart.com/K104500788X" class="btn-primary"><span>✦ &nbsp;Sim, Eu Quero Começar Agora</span></a>
-    <p class="hero-price-hint" style="margin-top:1rem;">Somente R$ 27 · Acesso imediato · Garantia de 7 dias</p>
-  </div>
-</section>
-
-<!-- ══════════ FOOTER ══════════ -->
-<footer>
-  <p style="color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;margin-bottom:1rem;">✦ Respira &amp; Desperta ✦</p>
-  <p>© 2025 Canal Respira &amp; Desperta · Todos os direitos reservados</p>
-  <p style="margin-top:0.5rem;"><a href="https://pay.hotmart.com/K104500788X">Política de Privacidade</a> · <a href="https://pay.hotmart.com/K104500788X">Termos de Uso</a></p>
-</footer>
-
-<!-- STICKY BAR -->
-<div class="sticky-bar" id="stickyBar">
-  <div class="sticky-bar-text">
-    <strong>O Código da Rendição</strong> — e-book completo por apenas <strong>R$ 27</strong>
-  </div>
-  <a href="https://pay.hotmart.com/K104500788X" class="btn-sticky">Quero Agora ✦</a>
+    <a href="https://pay.hotmart.com/K104500788X" class="btn-sticky" target="_blank" rel="noopener">Quero Agora ✦</a>
 </div>
 
 <script>
-  // Stars
-  const starsEl = document.getElementById('stars');
+  const starsEl = document.getElementById("stars");
   for (let i = 0; i < 120; i++) {
-    const s = document.createElement('div');
-    s.className = 'star';
+    const s = document.createElement("div");
+    s.className = "star";
     const size = Math.random() * 2.5 + 0.5;
-    s.style.cssText = `
-      width:${size}px;height:${size}px;
-      top:${Math.random()*100}%;left:${Math.random()*100}%;
-      --min:${Math.random()*0.2};
-      --max:${Math.random()*0.7+0.3};
-      --d:${Math.random()*4+2}s;
-      animation-delay:${Math.random()*5}s;
-    `;
+    s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--min:${Math.random()*0.2};--max:${Math.random()*0.7+0.3};--d:${Math.random()*4+2}s;animation-delay:${Math.random()*5}s;`;
     starsEl.appendChild(s);
   }
 
-  // Reveal on scroll
-  const reveals = document.querySelectorAll('.reveal');
+  const reveals = document.querySelectorAll(".reveal");
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); }
-    });
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
   }, { threshold: 0.1 });
   reveals.forEach(r => observer.observe(r));
 
-  // Sticky bar
-  const stickyBar = document.getElementById('stickyBar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 600) stickyBar.classList.add('show');
-    else stickyBar.classList.remove('show');
+  const stickyBar = document.getElementById("stickyBar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 600) stickyBar.classList.add("show");
+    else stickyBar.classList.remove("show");
   });
 
-  // FAQ
   function toggleFaq(el) {
     const item = el.parentElement;
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
+    const isOpen = item.classList.contains("open");
+    document.querySelectorAll(".faq-item").forEach(i => i.classList.remove("open"));
+    if (!isOpen) item.classList.add("open");
   }
-
-  // Smooth scroll
-  document.querySelectorAll('a[href="https://pay.hotmart.com/K104500788X"]').forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      document.getElementById('pricing').scrollIntoView({ behavior:'smooth' });
-    });
-  });
 </script>
 </body>
 </html>
